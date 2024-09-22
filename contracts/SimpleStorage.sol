@@ -19,7 +19,8 @@ contract SimpleStorage {
     // mapping here acts as an associative array assigning fav number to a person name
     mapping(string => uint256) public nameToFavNumber;
 
-    function store(uint256 _favouriteNumber) public {
+    // virtual makes this function overridable in inherited class
+    function store(uint256 _favouriteNumber) public virtual {
         myFavouriteNumber = _favouriteNumber;
     }
 
